@@ -1,5 +1,4 @@
 <?php
-
 class Response
 {
     public static function json($status = 200, $message = 'sucess', $data = null)
