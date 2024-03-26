@@ -1,14 +1,15 @@
 <?php
-include("database_connection.php");
+    session_start();
+    include("database_connection.php");
+    include("../views/register.php");
 
-$data = json_decode(file_get_contents('php://input'), true);
-    $name = $data['name'];
-    $description = $data['password'];
+    $name = $_SESSION['name'];
+    $password = password_hash($_SESSION['password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO name (name, password) VALUES ('$name', '$password')";
+    $sql = "INSERT INTO user (name, password) VALUES ('$name', '$password')";
 
     if ($conn->query($sql) == TRUE) {
-        echo json_encode(array("message" => "New record created sucessfully"));
+        echo json_encode(array("message" => "User created sucessfully!"));
     } else {
         echo json_encode(array("message" => "Error: " . $sql . "<br>" . $conn->error));
     }
