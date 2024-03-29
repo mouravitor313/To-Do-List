@@ -12,7 +12,7 @@
 <body>
     <form action="index.php" method="post">
     username:<br>
-    <input type="text" name="username">
+    <input type="text" name="name">
     password:<br>
     <input type="password" name="password">
     <input type="submit" name="register" value="register"></form>
@@ -22,12 +22,12 @@
 <?php 
     if(isset($_POST["register"])){
 
-        if(!empty($_POST["username"]) && !empty($_POST["password"])){
+        if(!empty($_POST["name"]) && !empty($_POST["password"])){
 
-            $_SESSION["username"] = $_POST["username"];
+            $_SESSION["name"] = $_POST["name"];
             $_SESSION["password"] = $_POST["password"];
 
-            header("Location: home.php");
+            header("Location: views/home.php");
         }
         else{
             echo"Missing a username or password<br>";
