@@ -7,5 +7,15 @@
 </head>
 <body>
     Home casa
+    <form action="home.php" method="post">
+        <input type="submit" name="logout" value="logout">
+    </form>
 </body>
 </html>
+
+<?php 
+    if(isset($_POST["logout"])){
+        session_destroy();
+        header("Location: register.php");
+    }
+?>
