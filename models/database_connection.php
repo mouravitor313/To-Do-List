@@ -2,7 +2,7 @@
     $db_server = "localhost";
     $db_user = "root";
     $db_pass = "";
-    $de_name = "tododb";
+    $db_name = "tododb";
     $conn = "";
 
     try{

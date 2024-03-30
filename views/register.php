@@ -10,7 +10,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="home.php" method="post">
     username:<br>
     <input type="text" name="name">
     password:<br>
@@ -26,10 +26,8 @@
 
             $_SESSION["name"] = $_POST["name"];
             $_SESSION["password"] = $_POST["password"];
-
-            header("Location: views/home.php");
         }
-        else{
+        else {
             echo"Missing a username or password<br>";
         }
     }

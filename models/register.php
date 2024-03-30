@@ -1,10 +1,10 @@
 <?php
-    session_start();
+    #session_start();
     include("database_connection.php");
-    include("../views/register.php");
+    # include("../views/register.php");
 
-    $name = $_SESSION['name'];
-    $password = password_hash($_SESSION['password'], PASSWORD_DEFAULT);
+    $name = "vitor";
+    $password = password_hash("1234", PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO user (name, password) VALUES ('$name', '$password')";
 
