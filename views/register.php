@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
 </head>
 <body>
     <form action="register.php" method="post">
@@ -25,7 +25,7 @@
         if(!empty($_POST["name"]) &&
            !empty($_POST["password"])){
 
-            $_SESSION["username"] = $_POST["name"];
+            $_SESSION["name"] = $_POST["name"];
             $_SESSION["password"] = $_POST["password"];
             
             header("Location: ../models/register.php");
