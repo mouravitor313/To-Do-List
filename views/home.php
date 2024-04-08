@@ -27,7 +27,6 @@
 
 <?php 
 
-    // echo($_SESSION["id_user"]);
     if(isset($_POST["add"])){
 
         if(!empty($_POST["title"]) &&
@@ -42,8 +41,8 @@
     if(isset($_POST["logout"])){
 
         session_destroy();
-        header("Location: register.php");
+        header("Location: login.php");
     }
 
     // adicionar para o banco de dados o titulo, descrição e o id do usuario no campo id_user
-?>
+
